@@ -1,0 +1,20 @@
+AppBundle\Entity\Invitation:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\InvitationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        description:
+            type: text
+    manyToOne:
+        utilisateur:
+          targetEntity: AppBundle\Entity\Utilisateur
+          joinColumn:
+            name: utilisateur
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

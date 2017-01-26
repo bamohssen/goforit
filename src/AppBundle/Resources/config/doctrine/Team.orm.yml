@@ -1,0 +1,24 @@
+AppBundle\Entity\Team:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\TeamRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nbrJoueurs:
+            type: integer
+            column: nbr_joueurs
+        libelle:
+            type: string
+            length: 255
+    manyToOne:
+        club:
+          targetEntity: AppBundle\Entity\Club
+          joinColumn:
+            name: club
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

@@ -1,0 +1,23 @@
+AppBundle\Entity\Local:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\LocalRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        libelle:
+            type: string
+            length: 255
+        adress:
+            type: string
+            length: 255
+        prixMatchCompetition:
+            type: string
+            length: 255
+        prixMatchUnique:
+            type: float
+    lifecycleCallbacks: {  }

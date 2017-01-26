@@ -1,0 +1,15 @@
+AppBundle\Entity\Regle:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\RegleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        description:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

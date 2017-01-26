@@ -1,0 +1,27 @@
+AppBundle\Entity\regles_competitions:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\regles_competitionsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        etat:
+            type: string
+            length: 255
+    manyToOne:
+        regles:
+          targetEntity: AppBundle\Entity\Regle
+          joinColumn:
+            name: regle_id
+            referencedColumnName: id
+        competitions:
+          targetEntity: AppBundle\Entity\Competition
+          joinColumn:
+            name: competition_id
+            referencedColumnName: id
+        
+    lifecycleCallbacks: {  }
